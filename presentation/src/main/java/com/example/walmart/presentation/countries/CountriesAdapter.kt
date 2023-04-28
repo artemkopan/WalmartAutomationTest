@@ -9,7 +9,9 @@ import com.example.walmart.domain.model.Country
 import com.example.walmart.presentation.R
 import com.example.walmart.presentation.databinding.CountryItemBinding
 
-class CountriesAdapter : ListAdapter<Country, CountryViewHolder>(diff) {
+class CountriesAdapter(
+    private val onItemClickListener: (Country) -> Unit
+) : ListAdapter<Country, CountryViewHolder>(diff) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
         val binding = CountryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CountryViewHolder(binding)
@@ -17,6 +19,9 @@ class CountriesAdapter : ListAdapter<Country, CountryViewHolder>(diff) {
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.binding.root.setOnClickListener {
+            onItemClickListener(getItem(holder.bindingAdapterPosition))
+        }
     }
 }
 

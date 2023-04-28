@@ -3,4 +3,7 @@
 
   <string name="format_name_with_region">%s, %s</string>
   <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="countries_title">Countries List</string>
+  <string name="countries_details">Country Details</string>
 </resources>

@@ -6,27 +6,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-  <androidx.appcompat.widget.Toolbar
-      android:id="@+id/action_bar"
-      android:layout_width="match_parent"
-      android:layout_height="?actionBarSize"
-      android:background="?colorPrimary"
-      app:titleTextColor="?android:textColorPrimaryInverse"
-      app:title="@string/app_name" />
-
-  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-      android:id="@+id/swipe_refresh_layout"
-      android:layout_width="match_parent"
-      android:background="?colorSurface"
-      android:layout_height="wrap_content">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/country_recycler_view"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/country_item" />
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:menu="@menu/countries_main"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/countries_title"
+        app:titleTextColor="?android:textColorPrimary" />
 
-  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/country_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/country_item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

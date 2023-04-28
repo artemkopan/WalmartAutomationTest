@@ -3,39 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
 
-  <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/name_with_region_view"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginEnd="@dimen/text_space"
-      android:textAppearance="?textAppearanceHeadline6"
-      app:layout_constraintEnd_toStartOf="@id/code_view"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:text="United States of America, NA " />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_with_region_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_space"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintEnd_toStartOf="@id/code_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="United States of America, NA " />
 
-  <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/code_view"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textAppearance="?textAppearanceSubtitle1"
-      app:layout_constraintBottom_toBottomOf="@id/name_with_region_view"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@id/name_with_region_view"
-      app:layout_constraintTop_toTopOf="@id/name_with_region_view"
-      tools:text="US" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/code_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceSubtitle1"
+        app:layout_constraintBottom_toBottomOf="@id/name_with_region_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name_with_region_view"
+        app:layout_constraintTop_toTopOf="@id/name_with_region_view"
+        tools:text="US" />
 
-  <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/capital_view"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/item_inner_space"
-      android:textAppearance="?textAppearanceSubtitle1"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/name_with_region_view"
-      tools:text="Washington, D.C" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/capital_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_inner_space"
+        android:textAppearance="?textAppearanceSubtitle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_with_region_view"
+        tools:text="Washington, D.C" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

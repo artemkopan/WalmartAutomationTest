@@ -12,4 +12,9 @@ class CountryRepoImpl(
     override suspend fun getCountries(): List<Country> {
         return restService.getCountries().map(countryMapper::toModel)
     }
+
+    override suspend fun getCountryDetailsByCode(code: String): Country? {
+        // temp solution for get country by code
+        return getCountries().firstOrNull { it.code == code }
+    }
 }

@@ -5,9 +5,16 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/countriesFragment">
 
-  <fragment
-      android:id="@+id/countriesFragment"
-      android:name="com.example.walmart.presentation.countries.CountriesFragment"
-      android:label="CountriesFragment"
-      tools:layout="@layout/countries_fragment" />
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.example.walmart.presentation.countries.CountriesFragment"
+        android:label="CountriesFragment"
+        tools:layout="@layout/countries_fragment" />
+
+    <fragment
+        android:id="@+id/countryDetailsFragment"
+        android:name="com.example.walmart.presentation.details.CountryDetailsFragment"
+        android:label="CountryDetailsFragment"
+        tools:layout="@layout/country_details_fragment" />
+
 </navigation>
